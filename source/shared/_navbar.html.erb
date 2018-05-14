@@ -1,7 +1,8 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <a href="/" class="navbar-wagon-brand">
-    <img src="images/logo.png" alt="logo">
+    <%= image_tag "logo.png" %>
+    <!-- <img src="images/logo.png" alt="logo"> -->
   </a>
 
   <!-- Right Navigation -->
@@ -13,11 +14,12 @@
     <!-- Profile picture with dropdown list -->
     <div class="navbar-wagon-item">
       <div class= "dropdown">
-        <% image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", data_toggle: "Drop-down" %>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/martinlnor", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", 'data-toggle': "dropdown" %>
+        <!-- , 'data-toggle': "dropdown" -->
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li><%= link_to "Profile","team.html" %></li>
+          <li><%= link_to "Dashboard","team.html" %></li>
+          <li><%= link_to "Log out","team.html" %></li>
         </ul>
       </div>
     </div>
