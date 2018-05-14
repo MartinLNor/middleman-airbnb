@@ -1,0 +1,51 @@
+martinlnor:
+  name: "Martin's house"
+  description: "The place to be !"
+  city_name: "Paris, France"
+  city_slug: "paris"
+  wifi: true
+  rating: 4
+  accomodates: 2
+  bathrooms: 1
+  bed_type: "Hamac"
+  bedrooms: 0
+  beds: 1
+  property_type: "Tree"
+  room_type: "Branch"
+  kitchen: true
+  tv: true
+  welcome_drink: true
+chaudard:
+  name: "Chaudard's villa"
+  description: "The pleasure's house"
+  city_name: "Tokyo, Japan"
+  city_slug: "tokyo"
+  wifi: true
+  rating: 3
+  accomodates: 0
+  bathrooms: 0
+  bed_type: "Luxuary"
+  bedrooms: 0
+  beds: 2
+  property_type: "Living room"
+  room_type: "No type"
+  kitchen: false
+  tv: true
+  welcome_drink: true
+geoffroymart:
+  name: Geoffroy's home
+  description: "Come here with your bike"
+  city_name: "London, UK"
+  city_slug: "london"
+  wifi: true
+  rating: 5
+  accomodates: 5
+  bathrooms: 4
+  bed_type: "XXXXL Bed"
+  bedrooms: "32"
+  beds: "43"
+  property_type: "Castle"
+  room_type: "All the castle"
+  kitchen: true
+  tv: true
+  welcome_drink: false

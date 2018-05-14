@@ -1,0 +1,113 @@
+---
+title: Let's Show
+---
+<!-- source/flats/show.html.erb -->
+<!-- Access data.flats with owner's name as key -->
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+<div class="wrapper-show">
+  <%= image_tag "https://kitt.lewagon.com/placeholder/cities/#{flat.city_name}", class: "img-city img-responsive" %>
+</div>
+
+<div class="wrapper-middle">
+  <div class="container text-center">
+    <div class="row">
+      <div class="card-show col-xs-6 col-xs-offset-1">
+        <div class="flexbox">
+          <div class="part-left">
+            <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle img-card" %>
+            <p><%= flat.name %></p>
+          </div>
+          <div class="part-right text-left">
+            <h4><%= flat.description %></h4>
+            <p><%= flat.city_name %></p>
+            <% flat.rating.times do %>
+                <i class="fa fa-star"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+      <div class="card-show col-xs-5">
+        <form class="show-form">
+          <h3 class="text-left"> Book this flat </h3>
+          <div class="row">
+            <div class="col-xs-6">
+              <input type="text" class="form-control" id="checkin" placeholder="checkin">
+            </div>
+            <div class="col-xs-6">
+              <input type="text" class="form-control" id="checkout" placeholder="checkout">
+            </div>
+          </div>
+          <div>
+            <select class="form-control" id="exampleSelect2">
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3 guest</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit" class="btn btn-danger">Book it</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrapper-description">
+  <div class="main-container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>About this flat </h2>
+        <p> This one bedroom studio lodges 2 people (there's 1 double bed) it is located in the city center, in a calm traditional residential area near city´s main Avenue - 3 minutes walk from Sacré Coeur. </p>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <h6> The space </h6>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <ul>
+              <li>Accomodates : <%= flat.accomodates %></li>
+              <li>Bathrooms : <%= flat.bathrooms %></li>
+              <li>Bed type : <%= flat.bed_type %></li>
+              <li>Bedrooms : <%= flat.bedrooms %></li>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <ul>
+              <li>Beds : <%= flat.beds %></li>
+              <li>Proporty type : <%= flat.property_type %></li>
+              <li>Room type: <%= flat.room_type %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-md-4">
+            <h6> Amenities </h6>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <ul>
+              <% if flat.kitchen %>
+                <li><i class="fa fa-apple"></i> Kitchen</li>
+              <% end %>
+              <% if flat.wifi %>
+                <li><i class="fa fa-wifi"></i> Wifi</li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="col-xs-6 col-md-4">
+            <ul>
+              <% if flat.tv %>
+                <li><i class="fa fa-film"></i> TV</li>
+              <% end %>
+              <% if flat.welcome_drink %>
+               <li><i class="fa fa-beer"></i> Welcome Drink</li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
