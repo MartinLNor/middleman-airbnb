@@ -1,0 +1,16 @@
+.wrapper {
+  background-color: #062743;
+  color: white;
+  padding: 50px;
+  height: calc(100vh - 170px);
+  li {
+    padding: 100px;
+  }
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
